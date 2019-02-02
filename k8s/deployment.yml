@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: go-kube-deployment
+  name: go-kube-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: go-kube
+    spec:
+      containers:
+      - name: main
+        image: kenkoii/go-kube
+        ports:
+        - containerPort: 3000

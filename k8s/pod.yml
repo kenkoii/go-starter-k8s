@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: go-kube-pod
+  labels:
+    app: go-kube
+spec:
+  containers:
+  - name: k8s-demo
+    image: kenkoii/go-kube
+    ports:
+    - containerPort: 3000
